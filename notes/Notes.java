@@ -293,5 +293,6 @@ public static void main(String[]args)throws IOException{
         }
 
         // плагины
-        Rainbow Brackets - разноцветные скобки
-        HighlightBracketPair
+        Rainbow Brackets-разноцветные скобки
+        HighlightBracketPair-работа со скобками
+        Color Scheme/Language Defaults/Semantic highlighting-разноцветные пересенные в настройках
