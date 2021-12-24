@@ -4,7 +4,7 @@ package com.javarush.task.task12.task1220;
 Класс Human и интерфейсы CanRun, CanSwim
 */
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+//import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class Solution {
     public static void main(String[] args) {
