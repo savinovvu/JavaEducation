@@ -296,3 +296,6 @@ public static void main(String[]args)throws IOException{
         Rainbow Brackets-разноцветные скобки
         HighlightBracketPair-работа со скобками
         Color Scheme/Language Defaults/Semantic highlighting-разноцветные пересенные в настройках
+        // переключение раскладки клавиатуры Ubuntu Alt + Shift
+        $sudo apt install gnome-tweaks
+        $gsettings set org.gnome.desktop.input-sources xkb-options "['grp:alt_shift_toggle']"
