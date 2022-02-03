@@ -26,6 +26,7 @@ public class Solution {
                 ((TwoRoomApt) ell).clean2Rooms();
             } else if (ell instanceof ThreeRoomApt) {
                 ((ThreeRoomApt) ell).clean3Rooms();
+
             }
         }
     }
