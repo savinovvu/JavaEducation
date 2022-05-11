@@ -316,6 +316,17 @@ public static void main(String[]args)throws IOException{
         outFileFirst.close();
         outFileSecond.close();
         }
+        //чтение из файла с помощью буфера
+        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Username\\Desktop\\test.txt");
+
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream, 200);
+
+        int i;
+
+        while((i = bufferedInputStream.read())!= -1){
+
+        System.out.print((char)i);
+        }
 
         // плагины
         Rainbow Brackets-разноцветные скобки
