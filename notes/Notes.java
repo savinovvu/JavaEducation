@@ -292,10 +292,35 @@ public static void main(String[]args)throws IOException{
         }
         }
 
+// Чтение одного файла и запись из него в два других пополам, если нечетное количество то большее количество в первый
+public static void main(String[]args)throws IOException{
+        BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
+        String pathInFile=reader.readLine();
+        String pathOutFileFirst=reader.readLine();
+        String pathOutFileSecond=reader.readLine();
+        reader.close();
+        InputStream inFile=new FileInputStream(pathInFile);
+        OutputStream outFileFirst=new FileOutputStream(pathOutFileFirst);
+        OutputStream outFileSecond=new FileOutputStream(pathOutFileSecond);
+        int halfOfFile=(inFile.available()+1)/2;
+        int numberOfByte=0;
+        while(inFile.available()>0){
+        if(numberOfByte<halfOfFile){
+        outFileFirst.write(inFile.read());
+        numberOfByte++;
+        }else{
+        outFileSecond.write(inFile.read());
+        }
+        }
+        inFile.close();
+        outFileFirst.close();
+        outFileSecond.close();
+        }
+
         // плагины
         Rainbow Brackets-разноцветные скобки
         HighlightBracketPair-работа со скобками
         Color Scheme/Language Defaults/Semantic highlighting-разноцветные пересенные в настройках
         // переключение раскладки клавиатуры Ubuntu Alt + Shift
         $sudo apt install gnome-tweaks
-        $gsettings set org.gnome.desktop.input-sources xkb-options "['grp:alt_shift_toggle']"
+        $gsettings set org.gnome.desktop.input-sources xkb-options"['grp:alt_shift_toggle']"
