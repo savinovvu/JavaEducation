@@ -345,3 +345,20 @@ public static void main(String[]args)throws IOException{
         String result = outputStream.toString();
         System.setOut(consoleStream);
         System.out.println(result.toUpperCase());
+
+        // чтение из одного файла в другой с заменой точек на восклицательный знак.
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String pathInFile = reader.readLine();
+        String pathOutFile = reader.readLine();
+        reader.close();
+        FileReader inFile = new FileReader(pathInFile);
+        BufferedReader inFileReader = new BufferedReader(inFile);
+        FileWriter outFile = new FileWriter(pathOutFile);
+        BufferedWriter outFileWriter = new BufferedWriter(outFile);
+        while (inFileReader.ready()) {
+        String line = inFileReader.readLine();
+        outFileWriter.write(line.replace(".", "!"));
+        }
+
+        inFileReader.close();
+        outFileWriter.close();
