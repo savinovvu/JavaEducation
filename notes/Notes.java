@@ -335,3 +335,13 @@ public static void main(String[]args)throws IOException{
         // переключение раскладки клавиатуры Ubuntu Alt + Shift
         $sudo apt install gnome-tweaks
         $gsettings set org.gnome.desktop.input-sources xkb-options"['grp:alt_shift_toggle']"
+
+// Ридер обертка
+        PrintStream consoleStream = System.out;
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream stream = new PrintStream(outputStream);
+        System.setOut(stream);
+        testString.printSomething();
+        String result = outputStream.toString();
+        System.setOut(consoleStream);
+        System.out.println(result.toUpperCase());
