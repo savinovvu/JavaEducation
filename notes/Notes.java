@@ -362,3 +362,8 @@ public static void main(String[]args)throws IOException{
 
         inFileReader.close();
         outFileWriter.close();
+// вывод в консоль элементов мар с самыми большими значениями.
+        Double maxValueInMap = (Collections.max(enrollment.values()));
+        enrollment.entrySet().stream()
+        .filter(e -> e.getValue().equals(maxValueInMap))
+        .forEach(e -> System.out.println(e.getKey()));
