@@ -367,3 +367,12 @@ public static void main(String[]args)throws IOException{
         enrollment.entrySet().stream()
         .filter(e -> e.getValue().equals(maxValueInMap))
         .forEach(e -> System.out.println(e.getKey()));
+
+        // операции со словами без объявления масива
+        while (inFileReader.ready()) {
+        for (String s : inFileReader.readLine().split(" "))
+        if (s.length() > 6) {
+        outFileWriter.write(d + s);
+        d = ",";
+        }
+        }
